@@ -2,5 +2,17 @@ import 'package:flutter/material.dart';
 import 'route_generator.dart';
 
 void main() {
-  runApp(const MaterialApp(onGenerateRoute: RouteGenerator.generateRoute));
+  runApp(
+    MaterialApp(
+      onGenerateRoute: RouteGenerator.generateRoute,
+      theme: ThemeData(
+          scaffoldBackgroundColor: Colors.white,
+          unselectedWidgetColor: Colors.white,
+          expansionTileTheme: ExpansionTileThemeData(
+            iconColor: Colors.white,
+            collapsedIconColor: Colors.white,
+          ),
+      ),
+    ),
+  );
 }
